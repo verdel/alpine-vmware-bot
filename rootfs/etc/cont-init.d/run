@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv sh
+
+# Create configuration files from templates
+if [ -f /opt/vmware-task-telegram-bot/config.yml.j2 ];then
+    j2 /opt/vmware-task-telegram-bot/config.yml.j2 > /opt/vmware-task-telegram-bot/config.yml
+    rm /opt/vmware-task-telegram-bot/config.yml.j2
+fi
